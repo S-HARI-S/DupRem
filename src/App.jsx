@@ -1,15 +1,11 @@
 import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import HMM from "./components/HMM";
+import Text from "./components/Text";
+import Buttons from "./components/Buttons";
 
-// import {
-//   createBrowserRouter,
-//   RouterProvider,
-//   BrowserRouter as Router,
-//   Route,
-//   Link
-// } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes , Link } from "react-router-dom";
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,7 +13,13 @@ function App() {
   return (
     <>
       <Navbar />
-<HMM / >
+      <Router>
+        <Routes>
+          <Route path="/buttons" element={<Buttons />} />
+          <Route path="/" element={<Text />} />
+        </Routes>
+
+      </Router>
     </>
   );
 }
