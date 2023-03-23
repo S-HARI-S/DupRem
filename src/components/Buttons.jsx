@@ -56,7 +56,6 @@ export default function Buttons() {
 
   function clicked() {
     setLetters([]);
-    setLetters([]);
 if(letters.length === 0)
 {
     navigate("/");
